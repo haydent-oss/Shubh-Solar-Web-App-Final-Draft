@@ -1,0 +1,26 @@
+{
+  "name": "shubh-solar-quotation-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shubh Solar quotation builder — vanilla HTML/CSS/JS front end with a PHP + MySQL API, built for Hostinger shared hosting. No build step and no runtime dependencies; this file only provides local development shortcuts.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "php -S localhost:8000 -t hostinger-final",
+    "start": "php -S localhost:8000 -t hostinger-final",
+    "serve:static": "npx --yes serve hostinger-final",
+    "test:cards": "npx --yes serve . --listen 8001",
+    "check": "node --check hostinger-final/script.js && node --check hostinger-final/quote-data.js",
+    "lint:php": "php -l hostinger-final/api/config.php && php -l hostinger-final/api/db.php && php -l hostinger-final/api/quotations.php && php -l hostinger-final/api/settings.php",
+    "zip": "cd hostinger-final && zip -r ../shubh-solar-quotation-builder-hostinger.zip . -x '.*'"
+  },
+  "engines": {
+    "php": ">=8.2"
+  },
+  "keywords": [
+    "solar",
+    "quotation",
+    "php",
+    "mysql",
+    "hostinger"
+  ]
+}
